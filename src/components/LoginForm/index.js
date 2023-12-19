@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import OTPInput, { ResendOTP } from "otp-input-react";
-import PhoneNumberValidation from '../PhoneNumberValidation'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import PhoneNumberValidation from '../PhoneNumberValidation';
 import OTPValidation from '../OTPValidation';
 import Dashboard from '../Dashboard';
 import RegistrationForm from '../RegistrationForm';
-import './index.css'
+import './index.css';
 
 
 
 const LoginForm = () => {
+  const navigate = useNavigate();;
   const [status, setStatus] = useState('LOGIN');
   const [dashboard, setDashboard] = useState(false);
   const [showRegistration, setShowRegistration] = useState(false);
@@ -86,7 +86,7 @@ const LoginForm = () => {
         <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695027900/Group_tubb6n.png" alt="successful img" />
         <h3 className='successful'>Successful</h3>
         <p className='successfulPara'>OPT Is verified successfully</p>
-        <button className='successBtn' onClick={onClickContinue}>Continue</button>
+        <button className='successBtn' onClick={() => navigate('/dashboard')}>Continue</button>
       </div>
     </div>
   );

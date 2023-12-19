@@ -1,0 +1,232 @@
+/* index.css */
+
+.services-container {
+  width: 1200px;
+  height: 113px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  padding-top: 64px;
+}
+
+.services-header {
+  padding: 16px;
+  background: #F5F6F7;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.services-title {
+  color: #1A1C1F;
+  font-size: 12px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  line-height: 13.92px;
+  word-wrap: break-word;
+}
+
+.services-subcategory {
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.services-section {
+  align-self: stretch;
+  height: 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.services-subsection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.services-category {
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.category-title {
+  padding: 10px 16px;
+  border-bottom: 2px #E40443 solid;
+  color: #040404;
+  font-size: 21px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  line-height: 23.10px;
+  word-wrap: break-word;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 372px;
+}
+
+.category-content {
+  width: 372px;
+  height: 295px;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px #EEF0F3 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.content-title {
+  text-align: center;
+  color: #1A1C1F;
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  line-height: 17.60px;
+  word-wrap: break-word;
+}
+
+.content-description {
+  width: 332px;
+  text-align: center;
+  color: #5B6572;
+  font-size: 12px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  line-height: 19.20px;
+  word-wrap: break-word;
+}
+
+.content-button {
+  width: 157px;
+  padding: 8px;
+  background: #E40443;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  line-height: 16.24px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.content-icon {
+  width: 48px;
+  height: 48px;
+  padding: 2.53px 2.44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add these styles at the end of your CSS file */
+
+.footer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #B60336;
+  width: 100vw;
+  height:350px;
+}
+.main{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 90%;
+  margin: 20px 60px 20px 60px;
+}
+.itemsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.icon-text{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.whiteContainer{
+  background-color: #fff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  font-weight: 400;
+  margin-right: 15px;
+  border-radius:8px ;
+  cursor: pointer;
+}
+.contact{
+  font-size: 17px;
+  color: #fff;
+  font-weight: 400;
+}
+.listHead{
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.listItem{
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  margin:0px 0px 10px 0px;
+}
+.dooperWhite{
+  width:150px;
+  height:40px;
+  margin:20px;
+  margin-left:-15px;
+}
+.copyWrite{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #B60336;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+.hr{
+  width:99.9%;
+  border-width: 1.5px 0px 0px 0px;
+  border-color: #fff;
+ 
+}
+
+.urgent-care-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
