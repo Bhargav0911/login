@@ -19,19 +19,11 @@ const OTPValidation=()=>{
     }
     const places=["-","-","-","-"]
     
-    return (
+    return(
         <div>
-          <OTPInput
-            value={OTP}
-            onChange={setOTP}
-            OTPLength={4}
-            otpType="number"
-            inputStyles={inputStyles}
-            disabled={false}
-            placeholder={places}
-          />
+            <OTPInput value={OTP} onChange={setOTP} OTPLength={4} otpType="number" inputStyles={inputStyles} disabled={false} placeholder={places} />
         </div>
-      );
+    )
 }
 
 

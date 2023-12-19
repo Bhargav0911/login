@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import PhoneNumberValidation from '../PhoneNumberValidation';
+import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import OTPInput, { ResendOTP } from "otp-input-react";
+import PhoneNumberValidation from '../PhoneNumberValidation'
 import OTPValidation from '../OTPValidation';
+import Dashboard from '../Dashboard';
 import RegistrationForm from '../RegistrationForm';
-import './index.css';
+import './index.css'
+
 
 
 const LoginForm = () => {
@@ -36,12 +40,13 @@ const LoginForm = () => {
           <label className='label'>Phone Number</label>
           {<PhoneNumberValidation />}
           <button className='loginBtn' onClick={onClickGetOtp}>Send OTP</button>
+          <button className='SignBtn' onClick={onClickSignUp}>
+        Sign Up
+      </button>
         </div>
       </div>
       <div className=''>
-      <button className='SignBtn' onClick={onClickSignUp}>
-        Sign Up
-      </button>
+      
         <div className='checkBoxContainer'>
           <input type='checkbox' className='checkBox' />
           <p>By signing up you agree to <span className='span_dooper'>Terms of use</span></p>
@@ -64,7 +69,7 @@ const LoginForm = () => {
       <div className='otpContainer'>
         <h2 className='verify'>Verify</h2>
         <p className='verifyPara'>Enter OTP which we sent to you</p>
-        <OTPValidation />
+        {/* <OTPValidation /> */}
         <button className='verifyBtn' onClick={onClickVerify}>Verify OTP</button>
       </div>
       <p className='bottomText'>Join the community of smart and experienced doctors.
