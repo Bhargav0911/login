@@ -4,6 +4,8 @@ import { FiPhone } from 'react-icons/fi';
 import { AiFillInstagram } from 'react-icons/ai';
 import { BsFacebook, BsLinkedin } from 'react-icons/bs';
 import {FiMail} from 'react-icons/fi'
+import PopUp1 from '../PopUp1'
+import PopUp2 from '../PopUp2';
 
 import './index.css';
 
@@ -11,6 +13,10 @@ const Services = () => {
   const [isUrgentCareVisible, setIsUrgentCareVisible] = useState(true);
   const [isStandaloneVisible, setIsStandaloneVisible] = useState(false);
   const [isFooterFixed, setIsFooterFixed] = useState(false);
+  const [isPopUp1Visible, setPopUp1Visible] = useState(false);
+  const [isPopUp2Visible, setPopUp2Visible] = useState(false);
+
+
 
   const showUrgentCare = () => {
     setIsUrgentCareVisible(true);
@@ -38,6 +44,22 @@ const Services = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const openPopUp1 = () => {
+    setPopUp1Visible(true);
+  };
+
+  const closePopUp1 = () => {
+    setPopUp1Visible(false);
+  };
+
+  const openPopUp2 = () =>{
+    setPopUp2Visible(true)
+  }
+
+  const closePopUp2 = () =>{
+    setPopUp2Visible(false)
+  }
 
   return (
     <div className="services-container">
@@ -67,11 +89,13 @@ const Services = () => {
         <div className='urgent-care-container'>
           <div className="category-container">
             <div className="category-content">
+            <img src="URL_TO_IMAGE_1" alt="Vaccination 1" className="category-image" />
+
               <div className="content-title">Vaccination 1</div>
               <div className="content-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
               </div>
-              <div className="content-button">Book Service</div>
+              <div className="content-button" >Book Service</div>
               <div className="content-icon">
                 {/* Add icon or other content if needed */}
               </div>
@@ -79,6 +103,8 @@ const Services = () => {
           </div>
           <div className="category-container">
             <div className="category-content">
+            <img src="URL_TO_IMAGE_1" alt="Vaccination 1" className="category-image" />
+
               <div className="content-title">Vaccination 2</div>
               <div className="content-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
@@ -91,6 +117,8 @@ const Services = () => {
           </div>
           <div className="category-container">
             <div className="category-content">
+            <img src="URL_TO_IMAGE_1" alt="Vaccination 1" className="category-image" />
+
               <div className="content-title">Vaccination 3</div>
               <div className="content-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
@@ -103,6 +131,8 @@ const Services = () => {
           </div>
           <div className="category-container">
             <div className="category-content">
+            <img src="URL_TO_IMAGE_1" alt="Vaccination 1" className="category-image" />
+
               <div className="content-title">Vaccination 4</div>
               <div className="content-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
@@ -115,6 +145,8 @@ const Services = () => {
           </div>
           <div className="category-container">
             <div className="category-content">
+            <img src="URL_TO_IMAGE_1" alt="Vaccination 1" className="category-image" />
+
               <div className="content-title">Vaccination 5</div>
               <div className="content-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
@@ -129,16 +161,25 @@ const Services = () => {
         </div>
       )}
       {/* End Urgent Care Containers */}
+      {/* Pop-up 1 */}
+      {isPopUp1Visible && (
+        <PopUp1 onClose={closePopUp1} />
+      )}
+      {isPopUp2Visible && (
+        <PopUp2 onClose={closePopUp2} />
+      )}
       {/* Add Standalone Services Containers */}
       {isStandaloneVisible && (
         <div className='urgent-care-container'>
           <div className="category-container">
           <div className="category-content">
+          <img src="https://via.placeholder.com/36x32" alt="Vaccination 1" className="category-image" />
+
               <div className="content-title">Vaccination 5</div>
               <div className="content-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
               </div>
-              <div className="content-button">Book Service</div>
+              <div className="content-button" onClick={openPopUp1}>Book Service</div>
               <div className="content-icon">
                 {/* Add icon or other content if needed */}
               </div>
@@ -146,6 +187,23 @@ const Services = () => {
           </div>
           <div className="category-container">
           <div className="category-content">
+          <img src="URL_TO_IMAGE_1" alt="Vaccination 1" className="category-image" />
+
+              <div className="content-title">Vaccination 5</div>
+              <div className="content-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+              </div>
+              <div className="content-button" onClick={openPopUp2}>Book Service</div>
+              <div className="content-icon">
+                {/* Add icon or other content if needed */}
+              </div>
+            </div>
+          </div>
+          <div className="category-container">
+          <div className="category-container">
+          <div className="category-content">
+          <img src="URL_TO_IMAGE_1" alt="Vaccination 1" className="category-image" />
+
               <div className="content-title">Vaccination 5</div>
               <div className="content-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
@@ -156,9 +214,6 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className="category-container">
-            {/* Standalone Service 3 */}
-            {/* ... */}
           </div>
         </div>
       )}
